@@ -1,2 +1,4 @@
-# web-420
 RESTFul API's
+#Contributors
+Professor Krasso - Bellevue University
+Brittany Dockter - Bellevue University
