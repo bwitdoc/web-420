@@ -3,8 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongoose = require("mongoose");
-mongoose.Promise = require("bluebird");
+var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -39,9 +39,9 @@ app.use(function(err, req, res, next) {
 
 // Database connection
 
-mongoose.connect("mongodb+srv://admin:admin@api-gateway-ywmzs.mongodb.net/test?retryWrites=true&w=majority",{
-  promiseLibrary: require("bluebird")
-}) .then ( () => console.log("connection successful"))
+mongoose.connect('mongodb+srv://admin:admin@api-gateway-ywmzs.mongodb.net/test?retryWrites=true&w=majority',{
+  promiseLibrary: require('bluebird')
+}).then ( () => console.log('connection successful'))
 .catch( (err) => console.error(err));
 
 module.exports = app;
