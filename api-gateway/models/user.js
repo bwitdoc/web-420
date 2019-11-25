@@ -5,8 +5,10 @@ var userSchema = new mongoose.Schema({
     email: String
 });
 
-module.exports = mongoose.model("User", userSchema);
+var User = mongoose.model('User', userSchema); 
+module.exports = User;
 
+// Database queries
 module.exports.add = (user, callback) => {
     user.save(callback);
 };
