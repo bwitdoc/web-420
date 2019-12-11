@@ -5,11 +5,14 @@ var checkToken = require('../check-token');
 
 // POST request for registering a user
 router.post('/auth/register', auth_controller.user_register);
+
+// GET specify token check with checkToken.js class and find user by auth controller
+router.get('/auth/token', checkToken, auth_controller.user_token);
+
+// POST request for login information
 router.post('/auth/login', auth_controller.user_login);
 
-// GET request for verifying user tokens
-router.get('/auth/token', auth_controller.user_token);
+// GET call the logout method
 router.get('/auth/logout', auth_controller.user_logout);
-router.get('/auth/token', checkToken, auth_controller.user_token);
 
 module.exports = router;
